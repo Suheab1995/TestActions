@@ -34,7 +34,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: Run a multiline script
-        run:
+        run: |
            ls -a
            echo
            java -version
