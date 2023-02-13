@@ -33,8 +33,17 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Setup Java JDK
-        uses: actions/setup-java@v3.10.0
-        with:
-           distribution: 'temurin' # See 'Supported distributions' for available options
-           java-version: '17'
+      - name: Run a multiline script
+        run: |
+           ls -a
+           echo
+           java -version
+           echo
+           mvn --version
+           echo
+           git --version
+           echo
+           whoami
+           echo
+           echo $RUNNER_WORKSPACE
+    
